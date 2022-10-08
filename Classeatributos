@@ -1,0 +1,25 @@
+Crie uma classe e insira nela, no mínimo, dois atributos, os quais devem ter um método acessor (get) e 
+um método modificador (set) para cada. Defina um objeto para cada atributo e elabore um construtor para criar alguma regra.
+
+
+
+class Animal {
+  String _jaula = '';
+  bool ehCarnivoro;
+
+  void setJaula() {
+    ehCarnivoro ? _jaula = 'separada' : _jaula = 'conjunta';
+  }
+
+  void getJaula() {
+    print(_jaula);
+  }
+
+  Animal(this.ehCarnivoro);
+}
+
+void main(List<String> arguments) {
+  var leao = Animal(true);
+  leao.setJaula();
+  leao.getJaula();
+}
